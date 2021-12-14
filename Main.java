@@ -2,7 +2,40 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 public class Main{
 
-
+    public static boolean allIn(int[] a){
+    	int[] b = new int[10]	;
+    	int counter = 0;
+    	for(int i = 0 ; i < b.length; i++){
+    		if(b[a[i]] == 0){
+    			b[a[i]] = 1;
+    			counter++;
+    	}
+    		
+    	}
+    	if(counter == 10)
+    	return true;
+    	else 
+    	return false;
+    	
+    }
+	
+	public static int biggest(int a, int b, int c){
+		int maxi = 0;
+		maxi = Math.max(a,b);
+		maxi = Math.max(maxi, c);
+		return maxi;
+	}
+	
+	public static int largestNum(int a, int b, int c){
+		int max = a;
+		if(b > max){
+			max = b;
+		}
+		if(c > max){
+			max = c;
+		}
+		return max;
+	}
     public static boolean isPrime(int x){
         for(int i = 2; i < x; i++){
             if(x % i == 0){
